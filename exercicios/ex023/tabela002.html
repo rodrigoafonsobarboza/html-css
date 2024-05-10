@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -29,6 +30,25 @@
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        /*efeito zebra odd = impar e even = par ou 2n -1 e 2n dentro do colchetes*/
+        tbody > tr:nth-child(odd) { /*2n -1*/
+            background-color: white;
+           /* color: white;
+            text-decoration: underline;*/
+        }
+        
+        tbody > tr:nth-child(even) { /*2n*/
+            background-color: lightgray;
+            font-weight: bold;
+            
         }
 
         td.num {
